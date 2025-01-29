@@ -1,0 +1,33 @@
+<div class="bg-slate-100 px-4 py-3 shadow-md flex items-center justify-between">
+  <!-- Left side: My Store button -->
+  <button class="p-2" (click)="onStore()">
+    <img 
+      src="https://www.mystore.in/s/62ea2c599d1398fa16dbae0a/66defda954ce55002beebf8c/mystore-logo-200x80.png" 
+      alt="My Store Logo" 
+      style="width: 100px; height: auto;"
+    />
+  </button>
+  
+
+  <!-- Right side: Cart and Account buttons -->
+  <div class="flex items-center gap-x-4">
+    <app-primary-button label="{{ cartLabel() }}" routerLink="/cart"></app-primary-button>
+    <button class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6 text-slate-500"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+        />
+      </svg>
+      <a class="flex items-center">{{loggedUserData}}</a>
+    </button>
+  </div>
+</div>
